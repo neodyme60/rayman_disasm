@@ -1,7 +1,7 @@
 .code32
 .text
-.globl main
-main:
+.globl start
+start:
 		jmp	_08013c_func
 
 .data
@@ -133,7 +133,6 @@ _010045_func:
 		add    $0x0026ac,%edi
 		add    $0x007d00,%ebp
 		mov    %al,_0101f9_func
-		mov    %al,_010216_jump
 		xor    %al,%al
 		mov    %eax,%ebx
 		inc    %ecx
@@ -142,7 +141,6 @@ _010045_func:
 		idiv   %ecx
 		mov    %esi,%edx
 		mov    %eax,%esi
-		mov    %ax,_010223_jump
 		mov    %ax,_010198_data
 		or     %edx,%edx
 		jns    _010162_jump
@@ -152,20 +150,16 @@ _010045_func:
 		inc    %edx
 		xor    %eax,%eax
 		idiv   %ecx
-		mov    %ax,_01021a_jump
-		mov    %ax,_0101b0_func
 		sar    $0x000010,%eax
 		mov    %ax,%si
 		xor    %edx,%edx
 		shld   $0x000010,%esi,%eax
 		shr    $0x000010,%ecx
 		cmp    $0x0026ac,%edi
-		jae    _0101c6_jump
 		push   %eax
 		sub    $0x0026ac,%edi
 		neg    %edi
 		shl    $0x000010,%eax
-		data16 		.byte 0x0000b8
 
 .data
 
@@ -192,7 +186,6 @@ _0101dd_data:
 		.ascii  "\x88\xbf"
 		.long   _042a9c_jump
 		.ascii  "\xc6\x87"
-		.long   _042aa4_jump
 
 .text
 
@@ -215,7 +208,6 @@ _0101f9_func:
 		adc    %al,%bh
 		add    $0x000020,%edi
 		dec    %cx
-		jne    _0101dd_jump
 
 	_01022e_jump:
 		mov    _091914_data,%ebx
@@ -252,8 +244,6 @@ _0101f9_func:
 	_010282_jump:
 		add    $0x0026ac,%edi
 		add    $0x007d00,%ebp
-		mov    %al,_01034c_jump
-		mov    %al,_010369_jump
 		xor    %al,%al
 		mov    %eax,%ebx
 		inc    %ecx
@@ -262,7 +252,6 @@ _0101f9_func:
 		idiv   %ecx
 		mov    %esi,%edx
 		mov    %eax,%esi
-		mov    %ax,_01037c_jump
 		mov    %ax,_0102f1_jump
 		or     %edx,%edx
 		jns    _0102bb_jump
@@ -272,7 +261,6 @@ _0101f9_func:
 		inc    %edx
 		xor    %eax,%eax
 		idiv   %ecx
-		mov    %ax,_010373_jump
 		mov    %ax,_010309_jump
 		sar    $0x000010,%eax
 		mov    %ax,%si
@@ -323,7 +311,6 @@ _0101f9_func:
 		jbe    _010353_jump
 		mov    %bp,_042a94_jump(%edi)
 		movb   $0x0000ff,_042a9c_jump(%edi)
-		mov    %bh,_042aa4_jump(%edi)
 
 	_010353_jump:
 		cmp    %bp,_042a98_jump(%edi)
@@ -376,8 +363,6 @@ _0101f9_func:
 	_0103db_jump:
 		add    $0x0026ac,%edi
 		add    $0x007d00,%ebp
-		mov    %al,_0104ab_jump
-		mov    %al,_0104c8_jump
 		xor    %al,%al
 		mov    %eax,%ebx
 		inc    %ecx
@@ -386,7 +371,6 @@ _0101f9_func:
 		idiv   %ecx
 		mov    %esi,%edx
 		mov    %eax,%esi
-		mov    %ax,_0104d5_jump
 		mov    %ax,_01044a_jump
 		or     %edx,%edx
 		jns    _010414_jump
@@ -396,7 +380,6 @@ _0101f9_func:
 		inc    %edx
 		xor    %eax,%eax
 		idiv   %ecx
-		mov    %ax,_0104cc_jump
 		mov    %ax,_010462_jump
 		sar    $0x000010,%eax
 		mov    %ax,%si
@@ -447,7 +430,6 @@ _0101f9_func:
 		jbe    _0104ac_jump
 		mov    %bp,_042a94_jump(%edi)
 		mov    %bh,_042a9c_jump(%edi)
-		movb   $0x0000ff,_042aa4_jump(%edi)
 
 	_0104ac_jump:
 		cmp    %bp,_042a98_jump(%edi)
@@ -500,8 +482,6 @@ _0101f9_func:
 	_010533_jump:
 		add    $0x0026ac,%edi
 		add    $0x007d00,%ebp
-		mov    %al,_0105fd_jump
-		mov    %al,_01061a_jump
 		xor    %al,%al
 		mov    %eax,%ebx
 		inc    %ecx
@@ -510,7 +490,6 @@ _0101f9_func:
 		idiv   %ecx
 		mov    %esi,%edx
 		mov    %eax,%esi
-		mov    %ax,_01062d_jump
 		mov    %ax,_0105a2_jump
 		or     %edx,%edx
 		jns    _01056c_jump
@@ -520,7 +499,6 @@ _0101f9_func:
 		inc    %edx
 		xor    %eax,%eax
 		idiv   %ecx
-		mov    %ax,_010624_jump
 		mov    %ax,_0105ba_jump
 		sar    $0x000010,%eax
 		mov    %ax,%si
@@ -571,7 +549,6 @@ _0101f9_func:
 		jbe    _010604_jump
 		mov    %bp,_042a94_jump(%edi)
 		movb   $0x000000,_042a9c_jump(%edi)
-		mov    %bh,_042aa4_jump(%edi)
 
 	_010604_jump:
 		cmp    %bp,_042a98_jump(%edi)
@@ -13860,7 +13837,6 @@ _019048_func:
 		cmpb   $0x000000,_0ce77e_data
 		je     _018eae_jump
 		mov    _0ce6dc_data,%eax
-		jmp    _018ce8_func
 
 
 
@@ -13921,7 +13897,6 @@ _019060_func:
 		mov    %edx,%ebx
 		call   _0161fa_func
 		mov    %esi,%eax
-		call   _018ce8_func
 		mov    (%esp),%edx
 		mov    0x000004(%esp),%ecx
 		mov    0x000008(%esp),%ebx
@@ -13964,7 +13939,6 @@ _019060_func:
 		mov    %edx,%ebx
 		call   _0161fa_func
 		mov    %esi,%eax
-		call   _018ce8_func
 		mov    (%esp),%edx
 		mov    0x000004(%esp),%ecx
 		mov    0x000008(%esp),%ebx
@@ -14818,7 +14792,6 @@ _019a2c_func:
 		sub    $0x000028,%edx
 		call   _0161fa_func
 		mov    %esi,%eax
-		call   _018ce8_func
 		mov    (%esp),%edx
 		mov    0x00000c(%esp),%ecx
 		mov    0x000004(%esp),%ebx
@@ -14828,7 +14801,6 @@ _019a2c_func:
 
 	_019b9d_jump:
 		mov    %esi,%eax
-		call   _018ce8_func
 
 	_019ba4_jump:
 		inc    %edi
@@ -14870,7 +14842,6 @@ _019a2c_func:
 		cmpl   $0x000000,_0ce674_data
 		je     _019c9d_jump
 		mov    $_0ce650_data,%eax
-		call   _018ce8_func
 		call   _019048_func
 		jmp    _019c9d_jump
 
@@ -14929,7 +14900,6 @@ _019a2c_func:
 		jne    _019ced_jump
 		cmpw   $0x0000f5,0x000060(%eax)
 		jne    _019ced_jump
-		call   _018ce8_func
 		jmp    _019d12_jump
 
 	_019ced_jump:
@@ -16717,7 +16687,6 @@ _01af1c_func:
 		mov    $0x00001e,%ebx
 		call   _01a1c4_func
 		mov    %ebp,%eax
-		call   _018ce8_func
 		jmp    _01b086_jump
 
 	_01b07f_jump:
@@ -17350,13 +17319,10 @@ _01b79c_func:
 	_01b910_jump:
 		call   _01a3f0_func
 		mov    $_0ce650_data,%eax
-		call   _018ce8_func
 		mov    $_0ced44_data,%eax
-		call   _018ce8_func
 		testb  $0x000004,_0cd94d_data
 		je     _01b93c_jump
 		mov    $_0cd8cc_data,%eax
-		call   _018ce8_func
 
 	_01b93c_jump:
 		add    $0x000008,%esp
@@ -29933,7 +29899,6 @@ _023ba0_func:
 		mov    _0d0028_data,%eax
 		cmpl   $0x000000,0x000024(%eax)
 		je     _023d87_jump
-		call   _018ce8_func
 
 	_023d87_jump:
 		mov    _0cf810_data,%bx
@@ -53834,7 +53799,6 @@ _0340f0_func:
 		call   _01ad00_func
 		call   _042134_func
 		mov    $_0ce650_data,%eax
-		call   _018ce8_func
 		mov    $_0ce650_data,%eax
 		call   _0567ac_func
 		call   _036bc4_func
@@ -55032,7 +54996,6 @@ _035028_func:
 		call   _06947c_func
 		call   _043dbc_func
 		mov    $_0ce650_data,%eax
-		call   _018ce8_func
 		call   _06799c_func
 		mov    _0cd138_data,%edx
 		push   %edx
@@ -55962,7 +55925,6 @@ _035c64_func:
 		call   _01cf94_func
 		call   _03cdf8_func
 		mov    $_0ce784_data,%eax
-		call   _018ce8_func
 		call   _06b258_func
 		cmpb   $0x000000,_0cfa40_data
 		je     _035cbe_jump
@@ -78180,7 +78142,6 @@ _044d90_func:
 		add    %al,(%eax)
 		add    %al,(%eax)
 		add    %ch,0x000075(%ebp)
-		jae    _044e0a_jump
 		arpl   %ax,(%eax)
 		add    %al,(%eax)
 		add    %al,(%eax)
@@ -83944,10 +83905,6 @@ _049294_func:
 		add    %al,(%eax)
 
 _0492c8_switch:
-		.long   _0c11e4_case
-		.long   _0c11e8_case
-		.long   _0c11ec_case
-		.long   _0c11f0_case
 
 
 
@@ -83969,9 +83926,6 @@ _0492d8_func:
 		.byte 0x000000
 
 _0492f4_switch:
-		.long   _0c11f4_case
-		.long   _0c11fc_case
-		.long   _0c1204_case
 
 
 
@@ -84212,7 +84166,6 @@ _049388_func:
 		call   _0498a4_func
 		mov    %edi,_0e4cb0_data
 		call   _0498a4_func
-		call   _049308_func
 		pop    %edi
 		pop    %esi
 		pop    %edx
@@ -85571,7 +85524,6 @@ _04a628_func:
 		mov    %dl,_0cc576_data
 		lea    0x00002c(%esp),%edi
 		mov    $0x000002,%ah
-		mov    $_04929d_jump,%esi
 		xor    %dh,%dh
 		mov    %ah,_0cc574_data
 		mov    %dh,_0cc575_data
@@ -86751,7 +86703,6 @@ _04b514_func:
 		push   %ebp
 		sub    $0x00001c,%esp
 		mov    %esp,%edi
-		mov    $_0492ab_jump,%esi
 		mov    _0cfa35_data,%al
 		movsl  %ds:(%esi),%es:(%edi)
 		movsl  %ds:(%esi),%es:(%edi)
@@ -89519,7 +89470,6 @@ _04d55c_func:
 		push   %ebp
 		sub    $0x000038,%esp
 		lea    0x00001c(%esp),%edi
-		mov    $_0492e0_jump,%esi
 		movsw  %ds:(%esi),%es:(%edi)
 		movsb  %ds:(%esi),%es:(%edi)
 		lea    0x000018(%esp),%edi
@@ -90742,7 +90692,6 @@ _04e470_func:
 		push   %edi
 		sub    $0x000008,%esp
 		mov    $0x000001,%ecx
-		mov    _049304_jump,%eax
 		mov    $0x0000a0,%edx
 		mov    %eax,(%esp)
 		call   _03ce20_func
@@ -92081,7 +92030,6 @@ _04f318_func:
 _04f488_func:
 		push   %ebx
 		push   %edx
-		call   _049308_func
 		xor    %eax,%eax
 
 	_04f491_jump:
@@ -127529,7 +127477,6 @@ _06799c_func:
 		cmp    %edx,%eax
 		jge    _067a0c_jump
 		mov    %edi,%eax
-		call   _018ce8_func
 
 	_067a0c_jump:
 		cmpb   $0x000000,_0cfa45_data
@@ -177502,7 +177449,6 @@ _089a2c_func:
 
 _089a64_func:
 		lea    (%esi,%esi,2),%esi
-		lea    %cs:_089b0a_jump(%esi),%eax
 		push   %eax
 		mov    (%ebx),%es
 		mov    0x000006(%ebx),%bp
@@ -184751,12 +184697,10 @@ _093608_data:
 		.long   _02f658_func
 		.long   _0643bc_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _061ea0_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _0291b4_func
 		.long   _02d858_jump
@@ -184766,27 +184710,22 @@ _093608_data:
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _06154c_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _03167c_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _0315f0_func
 		.long   _03167c_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _0629d8_func
@@ -184796,12 +184735,10 @@ _093608_data:
 		.long   _0674c8_func
 		.long   _0676ec_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _0628c0_func
@@ -184811,7 +184748,6 @@ _093608_data:
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _0628c0_func
@@ -184821,27 +184757,22 @@ _093608_data:
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _062658_func
 		.long   _062854_func
@@ -184851,72 +184782,58 @@ _093608_data:
 		.long   _06309c_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f2fc_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _06323c_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _0404b0_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _040e58_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f2fc_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _07d83c_func
 		.long   _07e190_func
@@ -184926,37 +184843,30 @@ _093608_data:
 		.long   _07cd54_func
 		.long   _07d43c_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _061894_func
 		.long   _061968_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _061f20_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _07cb48_func
 		.long   _07ccf0_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _062140_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _07d908_func
 		.long   _07e190_func
@@ -184966,47 +184876,38 @@ _093608_data:
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f2fc_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _021568_func
 		.long   _022050_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _07cd54_func
 		.long   _07d43c_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f2fc_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _054e1c_func
 		.long   _055144_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
@@ -185016,7 +184917,6 @@ _093608_data:
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _0625e8_func
 		.long   _02d858_jump
@@ -185026,7 +184926,6 @@ _093608_data:
 		.long   _07d070_func
 		.long   _07e258_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
@@ -185036,12 +184935,10 @@ _093608_data:
 		.long   _028b50_func
 		.long   _028ba4_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _028b40_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02b18c_func
@@ -185056,17 +184953,14 @@ _093608_data:
 		.long   _031400_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f2fc_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _01cc24_func
 		.long   _01cdb0_func
@@ -185076,22 +184970,18 @@ _093608_data:
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _07cd54_func
 		.long   _07d43c_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _07e420_func
 		.long   _07e6bc_func
@@ -185101,7 +184991,6 @@ _093608_data:
 		.long   _075b0c_func
 		.long   _0760cc_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _05d964_func
 		.long   _05dc90_func
@@ -185111,22 +185000,18 @@ _093608_data:
 		.long   _05dd58_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _076614_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _03dbb8_func
 		.long   _03e398_func
@@ -185136,57 +185021,46 @@ _093608_data:
 		.long   _03e550_func
 		.long   _02d858_jump
 		.long   _07b370_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _07d0f0_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _031f00_func
 		.long   _02d858_jump
 		.long   _032738_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _062024_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f714_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02ffdc_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _062ed0_func
 		.long   _02d858_jump
@@ -185196,132 +185070,106 @@ _093608_data:
 		.long   _02f658_func
 		.long   _0760cc_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _0760cc_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _075b0c_func
 		.long   _0760cc_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _075b0c_func
 		.long   _0760cc_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _066da4_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _061db0_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02018c_func
 		.long   _0200f0_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _020cf8_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _052870_func
 		.long   _052af4_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _031768_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _05342c_func
 		.long   _053838_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _061d10_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _067100_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f2fc_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _041650_func
 		.long   _02d858_jump
 		.long   _0419e4_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _07e120_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _07e000_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02fbf4_func
 		.long   _02d858_jump
 		.long   _02fc64_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02300c_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02a940_func
 		.long   _02b1fc_func
@@ -185331,17 +185179,14 @@ _093608_data:
 		.long   _02ab2c_func
 		.long   _02b1fc_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02abc8_func
 		.long   _02b1fc_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _07b370_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _01fd9c_func
 		.long   _020088_func
@@ -185351,7 +185196,6 @@ _093608_data:
 		.long   _022eac_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _07cb48_func
 		.long   _07ccf0_func
@@ -185366,42 +185210,34 @@ _093608_data:
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _06252c_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _061c34_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _061c08_func
 		.long   _061c20_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _03171c_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _0671f8_func
 		.long   _067380_func
@@ -185411,72 +185247,58 @@ _093608_data:
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _061ee4_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _0315f0_func
 		.long   _03167c_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _0620e4_func
 		.long   _02d858_jump
 		.long   _062104_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f2fc_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f2fc_func
 		.long   _02f378_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _05c3dc_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _061c4c_func
 		.long   _061c84_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _031190_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _0291b4_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f714_func
 		.long   _02f978_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _0301a4_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _055230_func
 		.long   _02d858_jump
@@ -185486,12 +185308,10 @@ _093608_data:
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _061d54_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _079f64_func
 		.long   _07a264_func
@@ -185501,7 +185321,6 @@ _093608_data:
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _062cd4_func
 		.long   _062d68_func
@@ -185516,57 +185335,46 @@ _093608_data:
 		.long   _02f2fc_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f2fc_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _030260_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _030490_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _061f50_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _07e838_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _07eb84_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _0620c4_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _061a90_func
 		.long   _0629d8_func
@@ -185576,42 +185384,34 @@ _093608_data:
 		.long   _02f658_func
 		.long   _07ebb8_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _0315f0_func
 		.long   _03167c_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _032280_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _032280_func
 		.long   _02d858_jump
 		.long   _032738_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _07ce04_func
 		.long   _07e258_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _031208_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _063340_func
 		.long   _063610_func
@@ -185621,32 +185421,26 @@ _093608_data:
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _03167c_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _03088c_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _03088c_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _0771b8_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
@@ -185656,7 +185450,6 @@ _093608_data:
 		.long   _075b0c_func
 		.long   _0760cc_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _077704_func
 		.long   _02d858_jump
@@ -185671,52 +185464,42 @@ _093608_data:
 		.long   _030260_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _065d90_func
 		.long   _066244_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f2fc_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _065b10_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _052c54_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _052d10_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _01c160_func
 		.long   _01c588_func
@@ -185726,17 +185509,14 @@ _093608_data:
 		.long   _01c75c_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _028c2c_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _022094_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
@@ -185746,62 +185526,49 @@ _093608_data:
 		.long   _022bac_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _022dd0_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _030908_func
 		.long   _02d858_jump
 		.long   _030be4_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _030be4_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
-		.long   _070ae4_unknown
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _030bf8_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _041328_func
 		.long   _02d858_jump
 		.long   _041354_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _041328_func
 		.long   _02d858_jump
 		.long   _041354_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _0331fc_func
 		.long   _033630_func
@@ -185811,62 +185578,50 @@ _093608_data:
 		.long   _052870_func
 		.long   _052af4_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _063030_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _0336c8_func
 		.long   _02d858_jump
 		.long   _033980_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _062e2c_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _05387c_func
 		.long   _053a04_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _03f340_func
 		.long   _03f4a4_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _030ea8_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _031060_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _0310f8_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _03f598_func
 		.long   _03f7ec_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _063340_func
 		.long   _063610_func
@@ -185881,62 +185636,50 @@ _093608_data:
 		.long   _054e1c_func
 		.long   _055144_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _061bb0_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _03f8ac_func
 		.long   _03fd78_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _03f8ac_func
 		.long   _03fd78_func
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _03ff5c_func
 		.long   _02d858_jump
 		.long   _040168_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _033b4c_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _03dbb8_func
 		.long   _03e398_func
@@ -185946,112 +185689,90 @@ _093608_data:
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _03088c_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _03088c_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _052c54_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _034024_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _063244_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _028874_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _0287d4_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 		.long   _02f658_func
 		.long   _02d858_jump
 		.long   _02ed74_func
-		.long   _05829c_unknown
 		.long   _0612f0_func
 
 _094a74_data:
