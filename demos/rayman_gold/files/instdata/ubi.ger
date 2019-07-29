@@ -1,0 +1,15 @@
+[Messages]
+110:deinst
+111:deunst
+112:deplay
+113:dequit
+
+[ConfigName]
+2000: Standardinstallation 
+
+[ApplicationName]
+3000:Rayman Designer (Shareware)
+
+[LocalizedApplicationName]
+4000:Rayman Designer (Shareware)
+

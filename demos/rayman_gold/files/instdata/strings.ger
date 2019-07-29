@@ -1,0 +1,211 @@
+Strings Version 01.55
+
+0:Nein
+1:Ja
+
+[CPU]
+10:386
+11:486
+12:Pentium
+
+[Windows resolution]
+20:640x480
+21:800x600
+22:1024x768
+23:1024x1536
+24:1152x864
+25:1280x1024
+
+[Windows colors]
+30:16 Farben
+31:256 Farben
+32:65k Farben
+33:16M Farben
+34:4G Farben
+
+[Memory]
+40:Mb
+
+[Drive]
+50:Bytes
+51:KB
+52:MB
+
+[CD ROM Speed]
+60:1x
+61:2x
+62:4x
+63:6x
+64:8x
+65:10x
+
+[Messages]
+100:Statusfenster
+101:Quelldatei
+102:Zieldatei
+103:Fortschritt der aktuellen Datei
+104: Fortschritt der Installation
+105:Abbrechen
+
+120:Ubi Soft Installer - Installationsverzeichnis
+121:Wählen Sie ein Verzeichnis
+122:Suchen
+123:OK
+124:Hinweis
+125:Zuwenig Speicherplatz ! Eine Installation auf diesem Laufwerk ist nicht möglich.
+126:Sie können nicht das Spiel auf diesem Laufwerk installieren, weil es nicht existiert.
+127:Abbrechen
+128:Der Pfad ist ungültig. Bitte wiederholen !
+129:Das gewählte Verzeichnis muß nicht :
+132: - im Hauptverzeichnis einer Festplatte oder
+133: - im Windows-Verzeichnis liegen
+134:Sie installieren die Software in ein vorhandenes Verzeichnis :
+
+130:Ubi Soft Installer - Lösche dll's
+131:Löschen dieser Datei wird Ihr System nicht beeinträchtigen. Im Zweifelsfall, "NEIN"wählen.
+140:Ubi Soft Installer - Ordner einrichten
+141:Wählen Sie einen Ordner
+142:Suchen
+143:OK
+144:Hinweis
+145:Dieser Name ist unzulässig
+
+150:CPU
+151:Windows Auflösung
+152:Windows Farben
+153:MMX
+154:Speicher
+155:3DFX Karte
+156:S3D-Virge Karte
+157:ATI 3D Karte
+158:Geschwindigkeit des CD-ROM Laufwerks
+159:Power VR Karte
+
+160:Video Für Windows
+161:Indeo VFW
+162:Microsoft Direct Draw
+163:Microsoft Direct X
+164:Win32s
+
+170:Ubi Soft Installer - Wahl der Installationsart
+171:Bitte wählen Sie die Größe der Installation
+172:Hardware-Komponenten (Anklicken für erneuten Test)
+173:Softwarekomponenten
+175:Installieren
+176:Abbrechen
+177:Komponente
+178:Gefunden
+179:Benötigt
+191:Details...
+192:Details aus
+193:Frei !
+194:Alles zeigen...
+195:Teste Software...
+
+180:Fehler bei Installation
+181:DirectX(tm) erfolgreich installiert! Windows muß neu gestartet werden, damit die Änderungen wirksam werden. 
+182:Diese Software benötigt DirectX(tm). DirectX(tm) ist nicht auf Ihrem Rechner installiert.
+183:Die Festplattenkapazität ist erschöpft. Bitte Iöschen Sie nicht benötigte Dateien.
+184:Pfadangabe falsch !
+185:Interne Fehlermeldung !
+186:DirectX(tm) Installation
+
+190:Deinstallation läuft...
+
+200:Ubi Soft Installer
+201:Die Software kann ohne die CDROM installiert werden.
+
+210:Ubi Soft Installer - Auto configuration
+211:Installieren
+212:Ändern
+213:Folgende Installationsart wird für Ihr System empfohlen:
+
+220:Ubi Soft Installer - Keine passende Installationsart.
+221:Es gibt keine Installationsart für Ihr System.
+222:Möchten Sie Details ?
+223:Ja
+224:Nein
+
+230:Ubi Soft Installer - Informationen
+231:Empfohlene Installationsart :
+232:Benötigte, aber nicht vorhandene Komponenten:
+233:Schließen
+234:Minimal
+235:Maximal
+236:genau
+237:Mehr freier Speicherplatz auf einem Ihrer Laufwerke benötigt.
+238:Keine
+
+240:Ubi Soft Installer 
+241:Installation gescheitert.
+
+250:Die bisherige Installation
+251:läuft nicht auf Ihrem System. Die folgenden Komponenten fehlen:
+252:Ubi Soft Installer - Informationen
+253:Schließen
+254:[Keine]
+255:Einige Dateien sind gelöscht worden.
+
+260:Fehler beim Starten
+261:Systemspeicher erschöpft.
+262:Ungültige "exe" -Datei (keine 32 Bit Anwendung oder Dateifehler)
+263:'exe'-Datei nicht gefunden
+264:Ungültiger Pfad für 'exe' Datei
+
+270:Ubi Soft Installer - 
+
+280:Ubi Soft Installer - Deinstallation
+281:Sie sind dabei, die aktuelle Version von %s zu deinstallieren !
+282:Wollen Sie weitermachen?
+283:Ja
+284:Nein
+285:Sie sind dabei, die aktuelle Version von %s zu deinstallieren !
+
+290:Ubi Soft Installer - Verzeichniswahl 
+291:Zielverzeichnis für Installation
+292:OK 
+293:Abbrechen
+
+300:Ubi Soft Installer - Ordner wählen
+301:Wo soll der neue Ordner liegen ?
+
+310:Soundkarte
+
+311:Bitte warten bis die Installation abgeschlossen ist.
+
+320:Ubi Soft Installer - Fehler
+321: laüft und kann momentan nicht (de-)installiert werden.
+
+330:Ubi Soft Installer - Fehler
+331:Sie können das Programm nicht starten, 
+332: da sie derzeit die Software auf Ihrem Rechner (de)installieren.
+
+340:Ubi Soft Installer - Fehler
+341:Setzen Sie die CD-ROM bitte 
+342: in Ihr CD-ROM Laufwerk ein.
+
+350:Deinstallation eines Ubi Soft Produkts
+351:Deinstallation %s
+352:%s spielen
+                     
+360:Ubi Soft Installer
+361:Installation beendet
+
+370:Ubi Soft Installer
+371:Deinstallation beendet
+
+380:Ubi Soft Installer - Software Tests
+381:Wählen Sie die durchzuführenden Tests :
+382:OK
+383:Abbrechen
+
+390:Ubi Soft Installer
+391:Möchten Sie die Informationen aus der Datei %s jetzt lesen ?
+
+400:Sie müssen Ihren Computer neu starten, um %s spielen zu können. Möchten Sie jetzt neu starten?
+
+410:Diese Software ist unter Windows NT %s nicht lauffähig.
+
+420:%s kann nicht initialisiert werden, da auf der Festplatte zuwenig Speicher frei ist.
+
+430:Choose your ON LINE system server
