@@ -107,3 +107,33 @@ For this purpose, they design their own tool [`swdisasm`](http://swars.vexillium
 
 While the two Rayman binary we have bare a small difference, the assembly output is identical.
 
+## Cracked version analysis
+
+On December 16th, 1995, the warez group “Hybrid” released a cracked version of Rayman, only 3 months and 15 days after its original release.
+
+The cracker of the game, someone named “Replicator”, wrote the following about the copy-protection:
+
+> The protection was a BITCH!
+> These french guys has to be paranoid or something…
+> It contained at least 10 CRC checks and 10 CD checks…
+> We've been working on this puppy for the last five days…
+> Even the sound configuration util was protected.
+> Should be done now… 'nuff said!
+
+Disassembling the cracked version of the game may be good way to evacuate the unnecessary code that is not needed to reverse engineer.
+
+### Analysis
+
+Using the same analysis method on the cracked verion gives the following informations:
+
+* The cracked version uses the PMODE/W DOS extender *v1.16*
+* The game is *uncompressed*
+* The LE binary is *11732 bytes shorter* than the original game
+
+```
+$ sha256sum raycracked*
+614dba5f117bc8caf7a31be9deca96100a28fe1535e6fd2df58fc62f5ed11649  raycracked.exe
+ec236e7fb1b5b3f767d2f1a77b85eed572dde0fd5d4b1b4528fa29dba36db381  raycracked.le
+```
+
+
